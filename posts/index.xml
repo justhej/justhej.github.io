@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Just Hej</title>
-    <link>http://justhej.surge.sh/posts/</link>
+    <link>https://justhej.github.io/posts/</link>
     <description>Recent content in Posts on Just Hej</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hej</copyright>
-    <lastBuildDate>Sat, 30 Dec 2023 16:36:27 +0800</lastBuildDate><atom:link href="http://justhej.surge.sh/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Dec 2023 16:36:27 +0800</lastBuildDate><atom:link href="https://justhej.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Swp_1_3: Loop Dogg</title>
-      <link>http://justhej.surge.sh/posts/swp_1_3/</link>
+      <link>https://justhej.github.io/posts/swp_1_3/</link>
       <pubDate>Sat, 30 Dec 2023 16:36:27 +0800</pubDate>
       
-      <guid>http://justhej.surge.sh/posts/swp_1_3/</guid>
+      <guid>https://justhej.github.io/posts/swp_1_3/</guid>
       <description>The final puzzle in chapter 3 is:
 Called &amp;ldquo;Four stash sweep&amp;rdquo;. Playgrounds expects the user to write something like a function that is looped over, like so:
 1func pattern(){ 2 moveForward() 3 collectGem() 4 moveForward() 5 collectGem() 6 turnLeft() 7 turnLeft() 8 moveForward() 9 moveForward() 10 turnRight() 11 moveForward() 12 collectGem() 13 turnLeft() 14 turnLeft() 15 moveForward() 16 moveForward() 17 collectGem() 18 moveForward() 19} 20 21for _ in 1...4{ 22 pattern() 23} However, I think it&amp;rsquo;s best to teach good practices from the get-go.</description>
@@ -21,10 +21,10 @@ Called &amp;ldquo;Four stash sweep&amp;rdquo;. Playgrounds expects the user to w
     
     <item>
       <title>Swp_1_2: The Hej standard</title>
-      <link>http://justhej.surge.sh/posts/swp_1_2/</link>
+      <link>https://justhej.github.io/posts/swp_1_2/</link>
       <pubDate>Tue, 26 Dec 2023 20:30:15 +0800</pubDate>
       
-      <guid>http://justhej.surge.sh/posts/swp_1_2/</guid>
+      <guid>https://justhej.github.io/posts/swp_1_2/</guid>
       <description>This is the second chapter&amp;rsquo;s solutions in Swift Playgrounds &amp;ldquo;Let&amp;rsquo;s Code 1&amp;rdquo; book.
 For detailed info and background, please see Swp_1_1.
 In the final challenge of chapter 2, what Playgrounds expects the learner to do is, which is what I did on my first run when I was new to programming:
@@ -33,10 +33,10 @@ In the final challenge of chapter 2, what Playgrounds expects the learner to do 
     
     <item>
       <title>Swp_1.1: Did you say noob?</title>
-      <link>http://justhej.surge.sh/posts/swp_1_1/</link>
+      <link>https://justhej.github.io/posts/swp_1_1/</link>
       <pubDate>Sat, 23 Dec 2023 20:11:44 +0800</pubDate>
       
-      <guid>http://justhej.surge.sh/posts/swp_1_1/</guid>
+      <guid>https://justhej.github.io/posts/swp_1_1/</guid>
       <description>This project is unique in that I&amp;rsquo;ve decided to re-solve the Swift Playgrounds puzzles.
 I say &amp;rsquo;re-solve&amp;rsquo; because I did them a long time ago as a noob, when I used to find it overwhelming.
 This time around, with more programming muscle under my belt (and knowing what pre-defined data structures are available for use), I will showcase my creativity and problem-solving within the constraints set by Swift Playgrounds; I will list the noob version first, followed by several solutions that progressively get better&amp;ndash;culminating in &amp;ldquo;hej-level&amp;rdquo; solutions that I think can&amp;rsquo;t be bested.</description>
@@ -44,10 +44,10 @@ This time around, with more programming muscle under my belt (and knowing what p
     
     <item>
       <title>Fcc_1: No CSS, we&#39;re British</title>
-      <link>http://justhej.surge.sh/posts/fcc_1/</link>
+      <link>https://justhej.github.io/posts/fcc_1/</link>
       <pubDate>Fri, 22 Dec 2023 20:11:25 +0800</pubDate>
       
-      <guid>http://justhej.surge.sh/posts/fcc_1/</guid>
+      <guid>https://justhej.github.io/posts/fcc_1/</guid>
       <description>This was my first project. It&amp;rsquo;s mostly HTML and the project did not require any CSS, but I added my own CSS just because I am not British :) [sense of humor is necessary sometimes].
 To code this project, I used the excellent IntellijIDEA for IDE.
 I hosted the final outcome for free on surge.sh. Surge rocks!
@@ -57,10 +57,10 @@ The other lovely cats are photos taken from Pixabay with thanks.</description>
     
     <item>
       <title>First</title>
-      <link>http://justhej.surge.sh/posts/first/</link>
+      <link>https://justhej.github.io/posts/first/</link>
       <pubDate>Mon, 11 Dec 2023 20:10:16 +0800</pubDate>
       
-      <guid>http://justhej.surge.sh/posts/first/</guid>
+      <guid>https://justhej.github.io/posts/first/</guid>
       <description>بسم‌الله الرحمن الرحیم
 هست کلید در گنج حکیم
 فاتحه فکرت و ختم سخن
