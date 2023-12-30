@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+  <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Swp_1_2: The Hej standard | Just Hej</title>
+  <link rel = 'canonical' href = 'http://justhej.surge.sh/posts/swp_1_2/'>
+  <meta name="description" content="I&#39;m Hej. Posts titled _Fcc_ stands for the Freecodecamp projects. Those titled _Swp_ are from Swift Playgrounds. This page will be further updated as needed. ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="Swp_1_2: The Hej standard" />
+<meta property="og:description" content="This is the second chapter&rsquo;s solutions in Swift Playgrounds &ldquo;Let&rsquo;s Code 1&rdquo; book.
+For detailed info and background, please see Swp_1_1.
+In the final challenge of chapter 2, what Playgrounds expects the learner to do is, which is what I did on my first run when I was new to programming:
+1func doubmove(){ 2 moveForward() 3 moveForward() 4} 5 6func doubThenTogg(){ 7 doubmove() 8 toggleSwitch() 9} 10 11func basicTogg(){ 12 doubThenTogg() 13 turnAndBack() 14} 15 16func doubTL(){ 17 turnLeft() 18 turnLeft() 19} 20 21func turnAndBack(){ 22 doubTL() 23 doubmove() 24} 25 26 27func longTogg(){ 28 doubThenTogg() 29 doubThenTogg() 30 doubTL() 31 doubmove() 32 doubmove() 33} 34 35basicTogg() 36basicTogg() 37turnRight() 38 39longTogg() 40longTogg() No longer a noob, I came up with these new shiny solutions now:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://justhej.surge.sh/posts/swp_1_2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-12-26T20:30:15+08:00" />
+<meta property="article:modified_time" content="2023-12-26T20:30:15+08:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Swp_1_2: The Hej standard"/>
+<meta name="twitter:description" content="This is the second chapter&rsquo;s solutions in Swift Playgrounds &ldquo;Let&rsquo;s Code 1&rdquo; book.
+For detailed info and background, please see Swp_1_1.
+In the final challenge of chapter 2, what Playgrounds expects the learner to do is, which is what I did on my first run when I was new to programming:
+1func doubmove(){ 2 moveForward() 3 moveForward() 4} 5 6func doubThenTogg(){ 7 doubmove() 8 toggleSwitch() 9} 10 11func basicTogg(){ 12 doubThenTogg() 13 turnAndBack() 14} 15 16func doubTL(){ 17 turnLeft() 18 turnLeft() 19} 20 21func turnAndBack(){ 22 doubTL() 23 doubmove() 24} 25 26 27func longTogg(){ 28 doubThenTogg() 29 doubThenTogg() 30 doubTL() 31 doubmove() 32 doubmove() 33} 34 35basicTogg() 36basicTogg() 37turnRight() 38 39longTogg() 40longTogg() No longer a noob, I came up with these new shiny solutions now:"/>
+
+  
+  
+    
+  
+  
+  <link rel="stylesheet" href="http://justhej.surge.sh/css/styles.7c754dee4bfc873743b12288cf94eadcfd3bee1f2cff5a106753b8047879ac5195c8d8ad90f6d73f12e9c841696c51a0abdeae8394e3eb3079f310f418ddf9ec.css" integrity="sha512-fHVN7kv8hzdDsSKIz5Tq3P077h8s/1oQZ1O4BHh5rFGVyNitkPbXPxLpyEFpbFGgq96ug5Tj6zB58xD0GN357A=="> 
+
+  
+  
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="http://justhej.surge.sh/images/favicon.ico" />
+
+  
+  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" http://justhej.surge.sh/posts/swp_1_1/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="http://justhej.surge.sh/posts/swp_1_3/" aria-label="Next">
+            <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2fjusthej.surge.sh%2fposts%2fswp_1_2%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=http%3a%2f%2fjusthej.surge.sh%2fposts%2fswp_1_2%2f&text=Swp_1_2%3a%20The%20Hej%20standard" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2fjusthej.surge.sh%2fposts%2fswp_1_2%2f&title=Swp_1_2%3a%20The%20Hej%20standard" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2fjusthej.surge.sh%2fposts%2fswp_1_2%2f&is_video=false&description=Swp_1_2%3a%20The%20Hej%20standard" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Swp_1_2%3a%20The%20Hej%20standard&body=Check out this article: http%3a%2f%2fjusthej.surge.sh%2fposts%2fswp_1_2%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2fjusthej.surge.sh%2fposts%2fswp_1_2%2f&title=Swp_1_2%3a%20The%20Hej%20standard" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2fjusthej.surge.sh%2fposts%2fswp_1_2%2f&title=Swp_1_2%3a%20The%20Hej%20standard" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2fjusthej.surge.sh%2fposts%2fswp_1_2%2f&name=Swp_1_2%3a%20The%20Hej%20standard&description=This%20is%20the%20second%20chapter%26rsquo%3bs%20solutions%20in%20Swift%20Playgrounds%20%26ldquo%3bLet%26rsquo%3bs%20Code%201%26rdquo%3b%20book.%0aFor%20detailed%20info%20and%20background%2c%20please%20see%20Swp_1_1.%0aIn%20the%20final%20challenge%20of%20chapter%202%2c%20what%20Playgrounds%20expects%20the%20learner%20to%20do%20is%2c%20which%20is%20what%20I%20did%20on%20my%20first%20run%20when%20I%20was%20new%20to%20programming%3a%0a1func%20doubmove%28%29%7b%202%20moveForward%28%29%203%20moveForward%28%29%204%7d%205%206func%20doubThenTogg%28%29%7b%207%20doubmove%28%29%208%20toggleSwitch%28%29%209%7d%2010%2011func%20basicTogg%28%29%7b%2012%20doubThenTogg%28%29%2013%20turnAndBack%28%29%2014%7d%2015%2016func%20doubTL%28%29%7b%2017%20turnLeft%28%29%2018%20turnLeft%28%29%2019%7d%2020%2021func%20turnAndBack%28%29%7b%2022%20doubTL%28%29%2023%20doubmove%28%29%2024%7d%2025%2026%2027func%20longTogg%28%29%7b%2028%20doubThenTogg%28%29%2029%20doubThenTogg%28%29%2030%20doubTL%28%29%2031%20doubmove%28%29%2032%20doubmove%28%29%2033%7d%2034%2035basicTogg%28%29%2036basicTogg%28%29%2037turnRight%28%29%2038%2039longTogg%28%29%2040longTogg%28%29%20No%20longer%20a%20noob%2c%20I%20came%20up%20with%20these%20new%20shiny%20solutions%20now%3a" aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2fjusthej.surge.sh%2fposts%2fswp_1_2%2f&t=Swp_1_2%3a%20The%20Hej%20standard" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    
+    <div id="toc">
+      <nav id="TableOfContents"></nav>
+    </div>
+    
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        Swp_1_2: The Hej standard
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2023-12-26 20:30:15 &#43;0800 CST" itemprop="datePublished">2023-12-26</time>
+          
+        </div>
+        
+        
+        <div class="article-read-time">
+          <i class="far fa-clock"></i>
+          
+          2 minute read
+        </div>
+        
+        
+        
+      </div>
+    </header>
+
+  
+    
+    <div class="content" itemprop="articleBody">
+      <p>This is the second chapter&rsquo;s solutions in Swift Playgrounds &ldquo;Let&rsquo;s Code 1&rdquo; book.</p>
+<p>For detailed info and background, please see Swp_1_1.</p>
+<p>In the final challenge of chapter 2, what Playgrounds expects the learner to do is, which is what I did on my first run when I was new to programming:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 1</span><span><span style="color:#ff7b72">func</span> <span style="color:#d2a8ff;font-weight:bold">doubmove</span>(){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 2</span><span>    moveForward()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 3</span><span>    moveForward()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 4</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 6</span><span><span style="color:#ff7b72">func</span> <span style="color:#d2a8ff;font-weight:bold">doubThenTogg</span>(){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 7</span><span>    doubmove()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 8</span><span>    toggleSwitch()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 9</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">10</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">11</span><span><span style="color:#ff7b72">func</span> <span style="color:#d2a8ff;font-weight:bold">basicTogg</span>(){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">12</span><span>    doubThenTogg()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">13</span><span>    turnAndBack()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">14</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">15</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">16</span><span><span style="color:#ff7b72">func</span> <span style="color:#d2a8ff;font-weight:bold">doubTL</span>(){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">17</span><span>    turnLeft()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">18</span><span>    turnLeft()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">19</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">20</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">21</span><span><span style="color:#ff7b72">func</span> <span style="color:#d2a8ff;font-weight:bold">turnAndBack</span>(){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">22</span><span>    doubTL()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">23</span><span>    doubmove()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">24</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">25</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">26</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">27</span><span><span style="color:#ff7b72">func</span> <span style="color:#d2a8ff;font-weight:bold">longTogg</span>(){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">28</span><span>    doubThenTogg()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">29</span><span>    doubThenTogg()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">30</span><span>    doubTL()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">31</span><span>    doubmove()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">32</span><span>    doubmove()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">33</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">34</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">35</span><span>basicTogg()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">36</span><span>basicTogg()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">37</span><span>turnRight()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">38</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">39</span><span>longTogg()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">40</span><span>longTogg()
+</span></span></code></pre></div><p>No longer a noob, I came up with these new shiny solutions now:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 1</span><span><span style="color:#ff7b72">func</span> <span style="color:#d2a8ff;font-weight:bold">turnAround</span>(){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 2</span><span>    turnLeft() 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 3</span><span>    turnLeft()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 4</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 6</span><span><span style="color:#ff7b72">var</span> <span style="color:#79c0ff">steps</span> = <span style="color:#a5d6ff">0</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 7</span><span><span style="color:#ff7b72">var</span> <span style="color:#79c0ff">switches</span> = <span style="color:#a5d6ff">0</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 8</span><span>turnRight()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 9</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">10</span><span><span style="color:#ff7b72">while</span> switches <span style="color:#ff7b72;font-weight:bold">&lt;</span> <span style="color:#a5d6ff">6</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">11</span><span>    moveForward()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">12</span><span>    steps <span style="color:#ff7b72;font-weight:bold">+=</span> <span style="color:#a5d6ff">1</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">13</span><span>    <span style="color:#ff7b72">if</span> isOnClosedSwitch {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">14</span><span>        toggleSwitch()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">15</span><span>         switches <span style="color:#ff7b72;font-weight:bold">+=</span> <span style="color:#a5d6ff">1</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">16</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">17</span><span>    isBlocked ? turnAround() : ()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">18</span><span>    <span style="color:#ff7b72">if</span> steps == <span style="color:#a5d6ff">16</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">19</span><span>        turnRight()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">20</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">21</span><span>   
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">22</span><span>}
+</span></span></code></pre></div><p>This is somewhat verbose but it was a great experience in thinking in terms of programming syntax. Further tweaking to make it &lsquo;modular&rsquo;:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 1</span><span><span style="color:#ff7b72">var</span> <span style="color:#79c0ff">steps</span> = <span style="color:#a5d6ff">0</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 2</span><span><span style="color:#ff7b72">var</span> <span style="color:#79c0ff">switches</span> = <span style="color:#a5d6ff">0</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 3</span><span>turnRight()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 5</span><span><span style="color:#ff7b72">func</span> <span style="color:#d2a8ff;font-weight:bold">turnAround</span>() {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 6</span><span>    turnLeft()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 7</span><span>    turnLeft()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 8</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 9</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">10</span><span><span style="color:#ff7b72">func</span> <span style="color:#d2a8ff;font-weight:bold">handleSwitch</span>() {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">11</span><span>    <span style="color:#ff7b72">if</span> isOnClosedSwitch {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">12</span><span>        toggleSwitch()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">13</span><span>        switches <span style="color:#ff7b72;font-weight:bold">+=</span> <span style="color:#a5d6ff">1</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">14</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">15</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">16</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">17</span><span><span style="color:#ff7b72">func</span> <span style="color:#d2a8ff;font-weight:bold">handleObstacle</span>() {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">18</span><span>    <span style="color:#ff7b72">if</span> isBlocked {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">19</span><span>        turnAround()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">20</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">21</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">22</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">23</span><span><span style="color:#ff7b72">while</span> switches <span style="color:#ff7b72;font-weight:bold">&lt;</span> <span style="color:#a5d6ff">6</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">24</span><span>    moveForward()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">25</span><span>    steps <span style="color:#ff7b72;font-weight:bold">+=</span> <span style="color:#a5d6ff">1</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">26</span><span>    handleSwitch()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">27</span><span>    handleObstacle()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">28</span><span>    <span style="color:#ff7b72">if</span> steps == <span style="color:#a5d6ff">16</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">29</span><span>           turnRight()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">30</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">31</span><span>}
+</span></span></code></pre></div><p>But still verbose, so needed more refactoring by using <code>inout</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 1</span><span><span style="color:#ff7b72">func</span> <span style="color:#d2a8ff;font-weight:bold">turnAround</span>() {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 2</span><span>    turnLeft()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 3</span><span>    turnLeft()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 4</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 5</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 6</span><span><span style="color:#ff7b72">func</span> <span style="color:#d2a8ff;font-weight:bold">moveAndHandle</span>(steps: <span style="color:#ff7b72">inout</span> Int, switches: <span style="color:#ff7b72">inout</span> Int) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 7</span><span>    moveForward()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 8</span><span>    steps <span style="color:#ff7b72;font-weight:bold">+=</span> <span style="color:#a5d6ff">1</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 9</span><span>    <span style="color:#ff7b72">if</span> isOnClosedSwitch {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">10</span><span>        toggleSwitch()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">11</span><span>        switches <span style="color:#ff7b72;font-weight:bold">+=</span> <span style="color:#a5d6ff">1</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">12</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">13</span><span>    <span style="color:#ff7b72">if</span> isBlocked {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">14</span><span>        turnAround()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">15</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">16</span><span>    <span style="color:#ff7b72">if</span> steps == <span style="color:#a5d6ff">16</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">17</span><span>        turnRight()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">18</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">19</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">20</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">21</span><span><span style="color:#ff7b72">var</span> <span style="color:#79c0ff">steps</span> = <span style="color:#a5d6ff">0</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">22</span><span><span style="color:#ff7b72">var</span> <span style="color:#79c0ff">switches</span> = <span style="color:#a5d6ff">0</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">23</span><span>turnRight()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">24</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">25</span><span><span style="color:#ff7b72">while</span> switches <span style="color:#ff7b72;font-weight:bold">&lt;</span> <span style="color:#a5d6ff">6</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">26</span><span>    moveAndHandle(steps: &amp;steps, switches: &amp;switches)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">27</span><span>}
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">28</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">29</span><span><span style="color:#ff7b72">func</span> <span style="color:#d2a8ff;font-weight:bold">turnAround</span>() {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">30</span><span>    turnLeft()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">31</span><span>    turnLeft()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">32</span><span>}
+</span></span></code></pre></div><p>I felt there was still more possibilities left unexplored:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span><span style="color:#ff7b72">for</span> step <span style="color:#ff7b72">in</span> <span style="color:#a5d6ff">1.</span>..<span style="color:#a5d6ff">20</span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">2</span><span>    moveForward()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">3</span><span>    isBlocked ? turnAround() : ()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">4</span><span>    step == <span style="color:#a5d6ff">8</span> ? turnRight() : ()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">5</span><span>    <span style="color:#ff7b72">if</span> [<span style="color:#a5d6ff">2</span>, <span style="color:#a5d6ff">6</span>, <span style="color:#a5d6ff">10</span>, <span style="color:#a5d6ff">12</span>, <span style="color:#a5d6ff">18</span>, <span style="color:#a5d6ff">20</span>].contains(step){
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">6</span><span>        toggleSwitch()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">7</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">8</span><span>    
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">9</span><span>}
+</span></span></code></pre></div><p>Now that is much better. But we could do more!</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 1</span><span>    <span style="color:#ff7b72">for</span> step <span style="color:#ff7b72">in</span> <span style="color:#a5d6ff">1.</span>..<span style="color:#a5d6ff">20</span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 2</span><span>        moveForward()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 3</span><span>       isOnClosedSwitch ? toggleSwitch() : () 
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 4</span><span>        <span style="color:#ff7b72">if</span> isBlocked {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 5</span><span>                turnLeft()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 6</span><span>                turnLeft()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 7</span><span>                }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 8</span><span>        <span style="color:#ff7b72">if</span> step == <span style="color:#a5d6ff">8</span>{
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681"> 9</span><span>            turnRight()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">10</span><span>        }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">11</span><span>        }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">12</span><span>    
+</span></span></code></pre></div><p>How do you like that?? Wait till you see Hej-level code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span><span style="color:#ff7b72">for</span> step <span style="color:#ff7b72">in</span> <span style="color:#a5d6ff">1.</span>..<span style="color:#a5d6ff">20</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">2</span><span>    moveForward()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">3</span><span>    <span style="color:#ff7b72">if</span> isOnClosedSwitch { toggleSwitch() }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">4</span><span>    <span style="color:#ff7b72">if</span> isBlocked { turnLeft(); turnLeft() }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">5</span><span>    <span style="color:#ff7b72">if</span> step == <span style="color:#a5d6ff">8</span> { turnRight() }
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">6</span><span>}
+</span></span></code></pre></div><p>Now I&rsquo;m satisfied.</p>
+<p>This was puzzle 8 of chapter 2 of book, in the repo below labeled 1.2.8. The other seven puzzles including the 8th one can be found <a href="https://github.com/justhej/swp1_2">here</a>.</p>
+
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/posts">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents"></nav>
+    </div>
+    
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=http%3a%2f%2fjusthej.surge.sh%2fposts%2fswp_1_2%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=http%3a%2f%2fjusthej.surge.sh%2fposts%2fswp_1_2%2f&text=Swp_1_2%3a%20The%20Hej%20standard" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=http%3a%2f%2fjusthej.surge.sh%2fposts%2fswp_1_2%2f&title=Swp_1_2%3a%20The%20Hej%20standard" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http%3a%2f%2fjusthej.surge.sh%2fposts%2fswp_1_2%2f&is_video=false&description=Swp_1_2%3a%20The%20Hej%20standard" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Swp_1_2%3a%20The%20Hej%20standard&body=Check out this article: http%3a%2f%2fjusthej.surge.sh%2fposts%2fswp_1_2%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=http%3a%2f%2fjusthej.surge.sh%2fposts%2fswp_1_2%2f&title=Swp_1_2%3a%20The%20Hej%20standard" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=http%3a%2f%2fjusthej.surge.sh%2fposts%2fswp_1_2%2f&title=Swp_1_2%3a%20The%20Hej%20standard" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=http%3a%2f%2fjusthej.surge.sh%2fposts%2fswp_1_2%2f&name=Swp_1_2%3a%20The%20Hej%20standard&description=This%20is%20the%20second%20chapter%26rsquo%3bs%20solutions%20in%20Swift%20Playgrounds%20%26ldquo%3bLet%26rsquo%3bs%20Code%201%26rdquo%3b%20book.%0aFor%20detailed%20info%20and%20background%2c%20please%20see%20Swp_1_1.%0aIn%20the%20final%20challenge%20of%20chapter%202%2c%20what%20Playgrounds%20expects%20the%20learner%20to%20do%20is%2c%20which%20is%20what%20I%20did%20on%20my%20first%20run%20when%20I%20was%20new%20to%20programming%3a%0a1func%20doubmove%28%29%7b%202%20moveForward%28%29%203%20moveForward%28%29%204%7d%205%206func%20doubThenTogg%28%29%7b%207%20doubmove%28%29%208%20toggleSwitch%28%29%209%7d%2010%2011func%20basicTogg%28%29%7b%2012%20doubThenTogg%28%29%2013%20turnAndBack%28%29%2014%7d%2015%2016func%20doubTL%28%29%7b%2017%20turnLeft%28%29%2018%20turnLeft%28%29%2019%7d%2020%2021func%20turnAndBack%28%29%7b%2022%20doubTL%28%29%2023%20doubmove%28%29%2024%7d%2025%2026%2027func%20longTogg%28%29%7b%2028%20doubThenTogg%28%29%2029%20doubThenTogg%28%29%2030%20doubTL%28%29%2031%20doubmove%28%29%2032%20doubmove%28%29%2033%7d%2034%2035basicTogg%28%29%2036basicTogg%28%29%2037turnRight%28%29%2038%2039longTogg%28%29%2040longTogg%28%29%20No%20longer%20a%20noob%2c%20I%20came%20up%20with%20these%20new%20shiny%20solutions%20now%3a" aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=http%3a%2f%2fjusthej.surge.sh%2fposts%2fswp_1_2%2f&t=Swp_1_2%3a%20The%20Hej%20standard" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2023  Hej 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+<script src=/js/code-copy.js></script>
+
+
+
+
+</html>
