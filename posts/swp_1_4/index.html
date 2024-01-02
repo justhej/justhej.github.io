@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/font-awesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="/lib/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <script type="text/javascript" src="https://latest.cactus.chat/cactus.js"></script>
+  <link rel="stylesheet" href="https://latest.cactus.chat/style.css" type="text/css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> Swp_1_4: Condition-wise | Just Hej</title>
+  <link rel = 'canonical' href = 'https://justhej.github.io/posts/swp_1_4/'>
+  <meta name="description" content="I&#39;m Hej. Posts titled _Fcc_ stands for the Freecodecamp projects. Those titled _Swp_ are from Swift Playgrounds. This page will be further updated as needed. ">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <meta name="googlebot" content="index,follow,snippet,archive">
+  <meta property="og:title" content="Swp_1_4: Condition-wise" />
+<meta property="og:description" content="This was a somewhat tedious chapter because the puzzles didn&rsquo;t allow for more solutions than one or two at most.
+Still, I tried to experiment as much as was possible. For instance, tuple-based conditional switch:
+1moveForward() 2switch (isOnClosedSwitch, isOnGem) { 3case (true, _): 4 toggleSwitch() 5case (_, true): 6 collectGem() 7default: 8 print(&#34;No switch or gem found.&#34;) 9} Which is something I had seen in C# and wanted to try out in Swift." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://justhej.github.io/posts/swp_1_4/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-01-02T16:46:32+08:00" />
+<meta property="article:modified_time" content="2024-01-02T16:46:32+08:00" />
+
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Swp_1_4: Condition-wise"/>
+<meta name="twitter:description" content="This was a somewhat tedious chapter because the puzzles didn&rsquo;t allow for more solutions than one or two at most.
+Still, I tried to experiment as much as was possible. For instance, tuple-based conditional switch:
+1moveForward() 2switch (isOnClosedSwitch, isOnGem) { 3case (true, _): 4 toggleSwitch() 5case (_, true): 6 collectGem() 7default: 8 print(&#34;No switch or gem found.&#34;) 9} Which is something I had seen in C# and wanted to try out in Swift."/>
+
+  
+  
+    
+  
+  
+  <link rel="stylesheet" href="https://justhej.github.io/css/styles.7c754dee4bfc873743b12288cf94eadcfd3bee1f2cff5a106753b8047879ac5195c8d8ad90f6d73f12e9c841696c51a0abdeae8394e3eb3079f310f418ddf9ec.css" integrity="sha512-fHVN7kv8hzdDsSKIz5Tq3P077h8s/1oQZ1O4BHh5rFGVyNitkPbXPxLpyEFpbFGgq96ug5Tj6zB58xD0GN357A=="> 
+
+  
+  
+  
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+  
+<link rel="icon" type="image/png" href="https://justhej.github.io/images/favicon.ico" />
+
+  
+  
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+  <div class="content index py4">
+
+  <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li>
+          <a class="icon" href=" https://justhej.github.io/posts/swp_1_3/" aria-label="Previous">
+            <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
+          </a>
+        </li>
+        
+        
+        <li>
+          <a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+            <i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i>
+          </a>
+        </li>
+        <li>
+          <a class="icon" href="#" aria-label="Share">
+            <i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i>
+          </a>
+        </li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fjusthej.github.io%2fposts%2fswp_1_4%2f" aria-label="Facebook">
+      <i class="fab fa-facebook " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fjusthej.github.io%2fposts%2fswp_1_4%2f&text=Swp_1_4%3a%20Condition-wise" aria-label="Twitter">
+      <i class="fab fa-twitter " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fjusthej.github.io%2fposts%2fswp_1_4%2f&title=Swp_1_4%3a%20Condition-wise" aria-label="Linkedin">
+      <i class="fab fa-linkedin " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fjusthej.github.io%2fposts%2fswp_1_4%2f&is_video=false&description=Swp_1_4%3a%20Condition-wise" aria-label="Pinterest">
+      <i class="fab fa-pinterest " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Swp_1_4%3a%20Condition-wise&body=Check out this article: https%3a%2f%2fjusthej.github.io%2fposts%2fswp_1_4%2f" aria-label="Email">
+      <i class="fas fa-envelope " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fjusthej.github.io%2fposts%2fswp_1_4%2f&title=Swp_1_4%3a%20Condition-wise" aria-label="Pocket">
+      <i class="fab fa-get-pocket " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fjusthej.github.io%2fposts%2fswp_1_4%2f&title=Swp_1_4%3a%20Condition-wise" aria-label="reddit">
+      <i class="fab fa-reddit " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fjusthej.github.io%2fposts%2fswp_1_4%2f&name=Swp_1_4%3a%20Condition-wise&description=This%20was%20a%20somewhat%20tedious%20chapter%20because%20the%20puzzles%20didn%26rsquo%3bt%20allow%20for%20more%20solutions%20than%20one%20or%20two%20at%20most.%0aStill%2c%20I%20tried%20to%20experiment%20as%20much%20as%20was%20possible.%20For%20instance%2c%20tuple-based%20conditional%20switch%3a%0a1moveForward%28%29%202switch%20%28isOnClosedSwitch%2c%20isOnGem%29%20%7b%203case%20%28true%2c%20_%29%3a%204%20toggleSwitch%28%29%205case%20%28_%2c%20true%29%3a%206%20collectGem%28%29%207default%3a%208%20print%28%26%2334%3bNo%20switch%20or%20gem%20found.%26%2334%3b%29%209%7d%20Which%20is%20something%20I%20had%20seen%20in%20C%23%20and%20wanted%20to%20try%20out%20in%20Swift." aria-label="Tumblr">
+      <i class="fab fa-tumblr " aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fjusthej.github.io%2fposts%2fswp_1_4%2f&t=Swp_1_4%3a%20Condition-wise" aria-label="Hacker News">
+      <i class="fab fa-hacker-news " aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+    
+    <div id="toc">
+      <nav id="TableOfContents"></nav>
+    </div>
+    
+  </span>
+</div>
+
+
+  <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 class="posttitle" itemprop="name headline">
+        Swp_1_4: Condition-wise
+      </h1>
+      <div class="meta">
+        
+        <div class="postdate">
+          
+          <time datetime="2024-01-02 16:46:32 &#43;0800 CST" itemprop="datePublished">2024-01-02</time>
+          
+        </div>
+        
+        
+        <div class="article-read-time">
+          <i class="far fa-clock"></i>
+          
+          0 minute read
+        </div>
+        
+        
+        
+      </div>
+    </header>
+
+  
+    
+    <div class="content" itemprop="articleBody">
+      <p>This was a somewhat tedious chapter because the puzzles didn&rsquo;t allow for more solutions than one or two at most.</p>
+<p>Still, I tried to experiment as much as was possible. For instance, tuple-based conditional switch:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c9d1d9;background-color:#0d1117;-moz-tab-size:2;-o-tab-size:2;tab-size:2;"><code class="language-swift" data-lang="swift"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">1</span><span>moveForward()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">2</span><span><span style="color:#ff7b72">switch</span> (isOnClosedSwitch, isOnGem) {
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">3</span><span><span style="color:#ff7b72">case</span> (<span style="color:#79c0ff">true</span>, <span style="color:#79c0ff">_</span>):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">4</span><span>    toggleSwitch()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">5</span><span><span style="color:#ff7b72">case</span> (<span style="color:#79c0ff">_</span>, <span style="color:#79c0ff">true</span>):
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">6</span><span>    collectGem()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">7</span><span><span style="color:#ff7b72">default</span>:
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">8</span><span>    print(<span style="color:#a5d6ff">&#34;No switch or gem found.&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6e7681">9</span><span>}
+</span></span></code></pre></div><p>Which is something I had seen in C# and wanted to try out in Swift.</p>
+<p>The rest of this project&ndash;a total of 214 lines of code&ndash;is on (github)[https://github.com/justhej/swp1_4/tree/main].</p>
+
+    </div>
+  </article>
+
+  
+  
+
+
+
+
+
+
+  <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/posts">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    
+    <div id="toc-footer" style="display: none">
+      <nav id="TableOfContents"></nav>
+    </div>
+    
+
+    <div id="share-footer" style="display: none">
+      
+      <ul>
+  
+  
+    
+  
+  
+  <li>
+    <a class="icon" href="http://www.facebook.com/sharer.php?u=https%3a%2f%2fjusthej.github.io%2fposts%2fswp_1_4%2f" aria-label="Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://twitter.com/share?url=https%3a%2f%2fjusthej.github.io%2fposts%2fswp_1_4%2f&text=Swp_1_4%3a%20Condition-wise" aria-label="Twitter">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.linkedin.com/shareArticle?url=https%3a%2f%2fjusthej.github.io%2fposts%2fswp_1_4%2f&title=Swp_1_4%3a%20Condition-wise" aria-label="Linkedin">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https%3a%2f%2fjusthej.github.io%2fposts%2fswp_1_4%2f&is_video=false&description=Swp_1_4%3a%20Condition-wise" aria-label="Pinterest">
+      <i class="fab fa-pinterest fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="mailto:?subject=Swp_1_4%3a%20Condition-wise&body=Check out this article: https%3a%2f%2fjusthej.github.io%2fposts%2fswp_1_4%2f" aria-label="Email">
+      <i class="fas fa-envelope fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://getpocket.com/save?url=https%3a%2f%2fjusthej.github.io%2fposts%2fswp_1_4%2f&title=Swp_1_4%3a%20Condition-wise" aria-label="Pocket">
+      <i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://reddit.com/submit?url=https%3a%2f%2fjusthej.github.io%2fposts%2fswp_1_4%2f&title=Swp_1_4%3a%20Condition-wise" aria-label="reddit">
+      <i class="fab fa-reddit fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="http://www.tumblr.com/share/link?url=https%3a%2f%2fjusthej.github.io%2fposts%2fswp_1_4%2f&name=Swp_1_4%3a%20Condition-wise&description=This%20was%20a%20somewhat%20tedious%20chapter%20because%20the%20puzzles%20didn%26rsquo%3bt%20allow%20for%20more%20solutions%20than%20one%20or%20two%20at%20most.%0aStill%2c%20I%20tried%20to%20experiment%20as%20much%20as%20was%20possible.%20For%20instance%2c%20tuple-based%20conditional%20switch%3a%0a1moveForward%28%29%202switch%20%28isOnClosedSwitch%2c%20isOnGem%29%20%7b%203case%20%28true%2c%20_%29%3a%204%20toggleSwitch%28%29%205case%20%28_%2c%20true%29%3a%206%20collectGem%28%29%207default%3a%208%20print%28%26%2334%3bNo%20switch%20or%20gem%20found.%26%2334%3b%29%209%7d%20Which%20is%20something%20I%20had%20seen%20in%20C%23%20and%20wanted%20to%20try%20out%20in%20Swift." aria-label="Tumblr">
+      <i class="fab fa-tumblr fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+  <li>
+    <a class="icon" href="https://news.ycombinator.com/submitlink?u=https%3a%2f%2fjusthej.github.io%2fposts%2fswp_1_4%2f&t=Swp_1_4%3a%20Condition-wise" aria-label="Hacker News">
+      <i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      
+        <a id="menu-toggle" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;" aria-label="Menu">
+          <i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+        <a id="toc-toggle" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;" aria-label="TOC">
+          <i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share-toggle" class="icon" href="#" onclick="$('#share-footer').toggle();return false;" aria-label="Share">
+          <i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Top of Page">
+          <i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+
+  <footer id="footer">
+  <div class="footer-left">
+    Copyright  &copy; 2024  Hej 
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+        <li><a href="/">Home</a></li>
+         
+        <li><a href="/posts">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+
+  </div>
+</body>
+
+<link rel="stylesheet" href=/lib/font-awesome/css/all.min.css>
+<script src=/lib/jquery/jquery.min.js></script>
+<script src=/js/main.js></script>
+
+<script src=/js/code-copy.js></script>
+
+
+
+
+</html>

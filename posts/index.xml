@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hej</copyright>
-    <lastBuildDate>Sat, 30 Dec 2023 16:36:27 +0800</lastBuildDate><atom:link href="https://justhej.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Jan 2024 16:46:32 +0800</lastBuildDate><atom:link href="https://justhej.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Swp_1_4: Condition-wise</title>
+      <link>https://justhej.github.io/posts/swp_1_4/</link>
+      <pubDate>Tue, 02 Jan 2024 16:46:32 +0800</pubDate>
+      
+      <guid>https://justhej.github.io/posts/swp_1_4/</guid>
+      <description>This was a somewhat tedious chapter because the puzzles didn&amp;rsquo;t allow for more solutions than one or two at most.
+Still, I tried to experiment as much as was possible. For instance, tuple-based conditional switch:
+1moveForward() 2switch (isOnClosedSwitch, isOnGem) { 3case (true, _): 4 toggleSwitch() 5case (_, true): 6 collectGem() 7default: 8 print(&amp;#34;No switch or gem found.&amp;#34;) 9} Which is something I had seen in C# and wanted to try out in Swift.</description>
+    </item>
+    
     <item>
       <title>Swp_1_3: Loop Dogg</title>
       <link>https://justhej.github.io/posts/swp_1_3/</link>
