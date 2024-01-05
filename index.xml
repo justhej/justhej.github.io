@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hej</copyright>
-    <lastBuildDate>Tue, 02 Jan 2024 16:46:32 +0800</lastBuildDate><atom:link href="https://justhej.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Jan 2024 20:11:04 +0800</lastBuildDate><atom:link href="https://justhej.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Swp_1.5: Staying Logical</title>
+      <link>https://justhej.github.io/posts/swp_1_5/</link>
+      <pubDate>Fri, 05 Jan 2024 20:11:04 +0800</pubDate>
+      
+      <guid>https://justhej.github.io/posts/swp_1_5/</guid>
+      <description>This chapter was 193 lines of code with only one chapter forbidding more than one solution.
+Hosted on github.</description>
+    </item>
+    
     <item>
       <title>Swp_1.4: Condition-wise</title>
       <link>https://justhej.github.io/posts/swp_1_4/</link>
