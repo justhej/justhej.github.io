@@ -7,7 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hej</copyright>
-    <lastBuildDate>Tue, 09 Jan 2024 17:53:17 +0800</lastBuildDate><atom:link href="https://justhej.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Mar 2024 16:02:26 +0800</lastBuildDate><atom:link href="https://justhej.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Swp_2_1: Variables</title>
+      <link>https://justhej.github.io/posts/swp_2_1/</link>
+      <pubDate>Sun, 17 Mar 2024 16:02:26 +0800</pubDate>
+      
+      <guid>https://justhej.github.io/posts/swp_2_1/</guid>
+      <description>This marks the first chapter of challenges from the Let&amp;rsquo;s Code 2 book on Swift Playgrounds. Each different solution I wrote has been marked with version number, like so: v- 0, v- 1 and so forth.
+Here&amp;rsquo;s all the code. Also making it available on Github in case you wanted to test the code.
+2.1.4 Incrementing the value 1// 2.1.4 2// v- noob 3 4var gemCounter = 0 5 6 while isBlockedLeft{ 7 moveForward() 8 if isOnGem{ 9 collectGem() 10 gemCounter += 1 11 } 12 if isBlocked &amp;amp;&amp;amp; !</description>
+    </item>
+    
+    <item>
+      <title>Swp_1.7: Algorithms</title>
+      <link>https://justhej.github.io/posts/swp_1_7/</link>
+      <pubDate>Sun, 11 Feb 2024 14:59:45 +0800</pubDate>
+      
+      <guid>https://justhej.github.io/posts/swp_1_7/</guid>
+      <description>This post covers the last chapter of the &amp;ldquo;Let&amp;rsquo;s Code 1&amp;rdquo; book on Swift Playgrounds.
+By the way, this chapter was somewhat difficul in that the problem space didn&amp;rsquo;t allow for too much variation in solutions.
+Here&amp;rsquo;s all the code. You can also get it from Github
+1.7.1 The Right-Hand rule 1// 1.7.1 2// V1 3 4func navigateAroundWall() { 5 if isBlockedRight { 6 moveForward() 7 } else { 8 turnRight() 9 moveForward() 10 } 11} 12 13while !</description>
+    </item>
+    
     <item>
       <title>Swp_1.6: All this while</title>
       <link>https://justhej.github.io/posts/swp_1_6/</link>
@@ -15,8 +38,7 @@
       
       <guid>https://justhej.github.io/posts/swp_1_6/</guid>
       <description>This is chapter 6 in book 1. Here&amp;rsquo;s all the code. You can also get it from Github.
-// 1.6.1 Creating smarter while loops
-1 2func solve() { 3 moveForward() 4 if isOnOpenSwitch { 5 while isOnOpenSwitch{ 6 moveForward() 7 if isOnClosedSwitch{ 8 toggleSwitch() 9 } 10 } 11 } else if isOnClosedSwitch{ 12 while isOnClosedSwitch{ 13 toggleSwitch() 14 if isOnOpenSwitch{ 15 moveForward() 16 } 17 } 18 } else { 19 moveForward() 20 } 21} 22 23for i in 1.</description>
+1// 1.6.1 Creating smarter while loops 2 3func solve() { 4 moveForward() 5 if isOnOpenSwitch { 6 while isOnOpenSwitch{ 7 moveForward() 8 if isOnClosedSwitch{ 9 toggleSwitch() 10 } 11 } 12 } else if isOnClosedSwitch{ 13 while isOnClosedSwitch{ 14 toggleSwitch() 15 if isOnOpenSwitch{ 16 moveForward() 17 } 18 } 19 } else { 20 moveForward() 21 } 22} 23 24for i in 1.</description>
     </item>
     
     <item>
@@ -72,19 +94,6 @@ In the final challenge of chapter 2, what Playgrounds expects the learner to do 
       <description>This project is unique in that I&amp;rsquo;ve decided to re-solve the Swift Playgrounds puzzles.
 I say &amp;rsquo;re-solve&amp;rsquo; because I did them a long time ago as a noob, when I used to find it overwhelming.
 This time around, with more programming muscle under my belt (and knowing what pre-defined data structures are available for use), I will showcase my creativity and problem-solving within the constraints set by Swift Playgrounds; I will list the noob version first, followed by several solutions that progressively get better&amp;ndash;culminating in &amp;ldquo;hej-level&amp;rdquo; solutions that I think can&amp;rsquo;t be bested.</description>
-    </item>
-    
-    <item>
-      <title>Fcc_1: No CSS, we&#39;re British</title>
-      <link>https://justhej.github.io/posts/fcc_1/</link>
-      <pubDate>Fri, 22 Dec 2023 20:11:25 +0800</pubDate>
-      
-      <guid>https://justhej.github.io/posts/fcc_1/</guid>
-      <description>This was my first project. It&amp;rsquo;s mostly HTML and the project did not require any CSS, but I added my own CSS just because I am not British :) [sense of humor is necessary sometimes].
-To code this project, I used the excellent IntellijIDEA for IDE.
-I hosted the final outcome for free on surge.sh. Surge rocks!
-The first cat in the photo is my baby, Wiwi.
-The other lovely cats are photos taken from Pixabay with thanks.</description>
     </item>
     
     <item>
