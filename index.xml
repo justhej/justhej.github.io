@@ -7,7 +7,43 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hej</copyright>
-    <lastBuildDate>Sun, 17 Mar 2024 16:02:26 +0800</lastBuildDate><atom:link href="https://justhej.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Apr 2024 23:22:34 +0800</lastBuildDate><atom:link href="https://justhej.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Swp_2_4: Parameters</title>
+      <link>https://justhej.github.io/posts/swp_2_4/</link>
+      <pubDate>Thu, 18 Apr 2024 23:22:34 +0800</pubDate>
+      
+      <guid>https://justhej.github.io/posts/swp_2_4/</guid>
+      <description>This is fourth chapter of challenges from the Let&amp;rsquo;s Code 2 book on Swift Playgrounds.
+Each different solution has version numbers v- 0, v- 1 and so forth.
+Here&amp;rsquo;s all the code on Github in case you wanted to test it.
+2.4 Parameters 2.4.1 Moving further forward 1// 2.4.1 2// v- 0 3 4let expert = Expert() 5func move(distance: Int) { 6	for i in 1...distance { 7	expert.moveForward() 8	} 9} 10 11var gem = 0 12 13while gem &amp;lt; 1 { 14 move(distance: 6) 15 expert.</description>
+    </item>
+    
+    <item>
+      <title>Swp_2_3: Initialization</title>
+      <link>https://justhej.github.io/posts/swp_2_3/</link>
+      <pubDate>Thu, 18 Apr 2024 23:22:30 +0800</pubDate>
+      
+      <guid>https://justhej.github.io/posts/swp_2_3/</guid>
+      <description>This is third chapter of challenges from the Let&amp;rsquo;s Code 2 book on Swift Playgrounds.
+Each different solution has version numbers v- 0, v- 1 and so forth.
+Here&amp;rsquo;s all the code on Github in case you wanted to test it.
+2.3 Initialization 2.3.1 Initializig your expert 1// 2.3.1 2// v- 0 3 4let expert = Expert() 5 6var gems = 0 7 8func pat(){ 9 for i in 1...10{ 10 expert.</description>
+    </item>
+    
+    <item>
+      <title>Swp_2_2: Types</title>
+      <link>https://justhej.github.io/posts/swp_2_2/</link>
+      <pubDate>Thu, 18 Apr 2024 23:22:25 +0800</pubDate>
+      
+      <guid>https://justhej.github.io/posts/swp_2_2/</guid>
+      <description>This is second chapter of challenges from the Let&amp;rsquo;s Code 2 book on Swift Playgrounds.
+Each different solution has version numbers v- 0, v- 1 and so forth.
+Here&amp;rsquo;s all the code on Github in case you wanted to test it.
+2.2 Types 2.2.1 Deactivating portals 1// 2.2.1 2// v- 0 3 4greenPortal.isActive = false 5var swis = 0 6 7moveForward() 8moveForward() 9moveForward() 10turnRight() 11 12while !isBlocked{ 13 moveForward() 14 if isOnClosedSwitch{ 15 toggleSwitch() 16 swis += 1 17 }; if isBlocked{ 18 turnLeft() 19 turnLeft() 20 }; if swis == 2{ 21 moveForward() 22 moveForward() 23 moveForward() 24 turnLeft() 25 if isBlocked{ 26 toggleSwitch() 27 turnLeft() 28 turnLeft() 29 } 30 }; 31 } 32 33 34//////////////////////////////// 1// 2.</description>
+    </item>
+    
     <item>
       <title>Swp_2_1: Variables</title>
       <link>https://justhej.github.io/posts/swp_2_1/</link>
