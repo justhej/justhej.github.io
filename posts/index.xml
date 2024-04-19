@@ -7,11 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Hej</copyright>
-    <lastBuildDate>Thu, 18 Apr 2024 23:22:34 +0800</lastBuildDate><atom:link href="https://justhej.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 14 Apr 2024 18:31:30 +0800</lastBuildDate><atom:link href="https://justhej.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Swp_2_5: World building</title>
+      <link>https://justhej.github.io/posts/swp_2_5/</link>
+      <pubDate>Sun, 14 Apr 2024 18:31:30 +0800</pubDate>
+      
+      <guid>https://justhej.github.io/posts/swp_2_5/</guid>
+      <description>This is fifth chapter of challenges from the Let&amp;rsquo;s Code 2 book on Swift Playgrounds.
+Here&amp;rsquo;s all the code on Github in case you wanted to test it.
+2.5 World Building 2.5.1 Uniting worlds 1// 2.5.1 2// v- 0 3 4let bk1 = Block() 5world.place(bk1, atColumn: 3, row: 3) 6 7 8while !isOnClosedSwitch{ 9 moveForward() 10 if isBlocked &amp;amp;&amp;amp; !isBlockedLeft{ 11 turnLeft() 12 } 13 if isBlocked &amp;amp;&amp;amp; !isBlockedRight{ 14 turnRight() 15 } 16} 17 18toggleSwitch() 19 20//////////////////////////////// 1// 2.</description>
+    </item>
+    
     <item>
       <title>Swp_2_4: Parameters</title>
       <link>https://justhej.github.io/posts/swp_2_4/</link>
-      <pubDate>Thu, 18 Apr 2024 23:22:34 +0800</pubDate>
+      <pubDate>Sat, 06 Apr 2024 23:22:34 +0800</pubDate>
       
       <guid>https://justhej.github.io/posts/swp_2_4/</guid>
       <description>This is fourth chapter of challenges from the Let&amp;rsquo;s Code 2 book on Swift Playgrounds.
@@ -23,7 +34,7 @@ Here&amp;rsquo;s all the code on Github in case you wanted to test it.
     <item>
       <title>Swp_2_3: Initialization</title>
       <link>https://justhej.github.io/posts/swp_2_3/</link>
-      <pubDate>Thu, 18 Apr 2024 23:22:30 +0800</pubDate>
+      <pubDate>Mon, 18 Mar 2024 23:22:30 +0800</pubDate>
       
       <guid>https://justhej.github.io/posts/swp_2_3/</guid>
       <description>This is third chapter of challenges from the Let&amp;rsquo;s Code 2 book on Swift Playgrounds.
@@ -35,7 +46,7 @@ Here&amp;rsquo;s all the code on Github in case you wanted to test it.
     <item>
       <title>Swp_2_2: Types</title>
       <link>https://justhej.github.io/posts/swp_2_2/</link>
-      <pubDate>Thu, 18 Apr 2024 23:22:25 +0800</pubDate>
+      <pubDate>Fri, 08 Mar 2024 23:22:25 +0800</pubDate>
       
       <guid>https://justhej.github.io/posts/swp_2_2/</guid>
       <description>This is second chapter of challenges from the Let&amp;rsquo;s Code 2 book on Swift Playgrounds.
@@ -47,7 +58,7 @@ Here&amp;rsquo;s all the code on Github in case you wanted to test it.
     <item>
       <title>Swp_2_1: Variables</title>
       <link>https://justhej.github.io/posts/swp_2_1/</link>
-      <pubDate>Sun, 17 Mar 2024 16:02:26 +0800</pubDate>
+      <pubDate>Sat, 17 Feb 2024 16:02:26 +0800</pubDate>
       
       <guid>https://justhej.github.io/posts/swp_2_1/</guid>
       <description>This marks the first chapter of challenges from the Let&amp;rsquo;s Code 2 book on Swift Playgrounds. Each different solution I wrote has been marked with version number, like so: v- 0, v- 1 and so forth.
